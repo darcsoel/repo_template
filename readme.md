@@ -1,1 +1,3 @@
-pip-compile --output-file requirements.txt requirements.in
+`pip install poetry`
+
+`poetry install`
