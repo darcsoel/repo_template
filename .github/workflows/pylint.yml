@@ -1,6 +1,6 @@
 name: Pylint
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
@@ -20,4 +20,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint --fail-under=8.0 `ls -R|grep .py$|xargs`
+        pylint --fail-under=9.0 `ls -R|grep .py$|xargs`
