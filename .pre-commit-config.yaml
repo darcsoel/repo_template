@@ -50,5 +50,5 @@ repos:
       entry: mypy
       language: system
       'types_or': [ python, pyi ]
-      args: ["--no-strict-optional", "--ignore-missing-imports", "--scripts-are-modules" ]
+      args: ["--no-strict-optional", "--ignore-missing-imports", "--scripts-are-modules"]
       require_serial: true
