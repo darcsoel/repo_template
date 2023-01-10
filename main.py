@@ -17,4 +17,5 @@ def print_hi(name: str) -> None:
 if __name__ == "__main__":
     print_hi("PyCharm")
 
+# check GH codespaces git push
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
