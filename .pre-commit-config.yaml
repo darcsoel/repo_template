@@ -42,7 +42,7 @@ repos:
       name: xenon
       args: [--max-absolute B --max-modules A --max-average A]
       entry: xenon
-      language: python
+      language: system
       types: ['text']
 
     - id: mypy
