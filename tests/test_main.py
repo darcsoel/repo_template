@@ -6,6 +6,9 @@ Unit tests
 """
 
 
+from main import Foo
+
+
 def test_1() -> None:
-    """Dummy test to prevent exit code 5"""
-    assert True
+    test = Foo()
+    assert test.main()

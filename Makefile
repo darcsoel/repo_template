@@ -1,5 +1,5 @@
 test:
-	pytest tests.py
+	pytest
 
 format:
 	pre-commit run --all-files
