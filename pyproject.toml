@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "repo_template"
-version = "0.1.0"
+version = "0.0.1"
 description = "Template description"
 authors = ["Ross <rostikvunarchuk@gmail.com>"]
 
