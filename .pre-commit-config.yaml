@@ -16,14 +16,12 @@ repos:
       name: black
       entry: black
       language: system
-      exclude: ^(venv/|docs/)
       types: ['python']
 
     - id: isort
       name: isort
       entry: isort
       language: system
-      exclude: ^(venv/|docs/)
       types: ['python']
 
     - id: pylint
