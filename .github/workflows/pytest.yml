@@ -18,7 +18,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip poetry
         pip install poetry-plugin-export
-        poetry export -f requirements.txt --output requirements.txt --without-hashes --dev
+        poetry export -f requirements.txt --output requirements.txt --without-hashes --with=dev
         pip install -r requirements.txt
     - name: Analysing the code with pytest
       run: |
