@@ -9,6 +9,6 @@ Unit tests
 from main import Foo
 
 
-def test_1():
+def test_1() -> None:
     test = Foo()
     assert test.main()
