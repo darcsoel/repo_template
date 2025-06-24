@@ -1,7 +1,4 @@
 {
-    "python.analysis.extraPaths": [
-        "./src"
-    ],
     "python.analysis.typeCheckingMode": "strict",
     "python.analysis.autoImportCompletions": true,
     "python.analysis.diagnosticMode": "workspace",
@@ -15,5 +12,20 @@
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "pylint.args": ["-rcfile=pyproject.toml"],
-    "mypy-type-checker.args": ["--config-file=pyproject.toml"]
+    "mypy-type-checker.args": [
+        "--config-file=pyproject.toml"
+    ],
+    "python.analysis.extraPaths": [
+        "./src"
+    ],
+    "makefile.configureOnOpen": false,
+    
+    "testing.showCoverageInExplorer": true,
+    "testing.coverageBarThresholds": {
+        "red": 0,
+        "yellow": 60,
+        "green": 90
+    },
+    "testing.coverageToolbarEnabled": true,
+    "testing.displayedCoveragePercent": "statement"
 }
