@@ -13,6 +13,7 @@ keywords = ["python", "poetry", "template"]
 dev = [
     "mypy>=1.17.1",
     "pre-commit>=4.3.0",
+    "pytest>=8.4.1",
     "ruff>=0.12.11",
     "xenon>=0.9.3",
 ]
