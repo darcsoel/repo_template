@@ -1,6 +1,6 @@
 env:
 	uv venv
-	uv synv --group dev
+	uv sync --group dev
 
 test:
 	uv run pytest -vvv
