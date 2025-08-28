@@ -1,5 +1,9 @@
+env:
+	uv venv
+	uv synv --group dev
+
 test:
-	pytest -vvv
+	uv run pytest -vvv
 
 format:
-	pre-commit run --all-files
+	uv run pre-commit run --all-files

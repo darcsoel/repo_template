@@ -9,46 +9,28 @@ repos:
       - id: detect-private-key
       - id: end-of-file-fixer
 
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.12.11
+    hooks:
+      # Run the linter.
+      - id: ruff-check
+      # Run the formatter.
+      - id: ruff-format
+
   - repo: local
     hooks:
-    - id: black
-      name: black
-      entry: poetry run black
-      language: system
-      exclude: ^(venv/|docs/)
-      types: ['python']
+      - id: xenon
+        name: xenon
+        args: [--max-absolute B --max-modules A --max-average A]
+        entry: uv run xenon
+        language: python
+        types: ['text']
 
-    - id: isort
-      name: isort
-      entry: poetry run isort
-      language: system
-      exclude: ^(venv/|docs/)
-      types: ['python']
-
-    - id: pylint
-      name: pylint
-      entry: poetry run pylint
-      language: system
-      types: ['python']
-
-    - id: bandit
-      name: bandit
-      entry: poetry run bandit
-      args: ['-c',  'pyproject.toml']
-      language: system
-      types: ['python']
-
-    - id: xenon
-      name: xenon
-      args: [--max-absolute B --max-modules A --max-average A]
-      entry: poetry run xenon
-      language: python
-      types: ['text']
-
-    - id: mypy
-      name: mypy
-      entry: poetry run mypy
-      language: system
-      'types_or': [ python, pyi ]
-      args: [ "--ignore-missing-imports", "--scripts-are-modules" ]
-      require_serial: true
+      - id: mypy
+        name: mypy
+        entry: uv run mypy
+        language: system
+        'types_or': [ python, pyi ]
+        args: [ "--ignore-missing-imports", "--scripts-are-modules" ]
+        require_serial: true

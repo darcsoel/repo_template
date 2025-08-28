@@ -5,7 +5,6 @@
 Unit tests
 """
 
-
 from main import Foo
 
 
