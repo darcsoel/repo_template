@@ -6,8 +6,8 @@ authors = [{name = "Ross", email = "Ross <rostikvunarchuk@gmail.com>"}]
 maintainers = [{name = "Ross", email = "Ross <rostikvunarchuk@gmail.com>"}]
 urls = { repository = "https://github.com/darcsoel/repo_template" }
 license = "BSD-3-Clause"
-keywords = ["python", "poetry", "template"]
-
+keywords = ["python", "uv", "template"]
+requires-python = "3.13"
 
 [dependency-groups]
 dev = [
