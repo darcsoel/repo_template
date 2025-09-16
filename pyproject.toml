@@ -1,6 +1,6 @@
 [project]
 name = "repo_template"
-version = "0.4.1"
+version = "0.4.2"
 description = "Template description"
 authors = [{name = "Ross", email = "Ross <rostikvunarchuk@gmail.com>"}]
 maintainers = [{name = "Ross", email = "Ross <rostikvunarchuk@gmail.com>"}]
