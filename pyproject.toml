@@ -1,6 +1,6 @@
 [project]
 name = "repo_template"
-version = "0.4.2"
+version = "0.5.0"
 description = "Template description"
 authors = [{name = "Ross", email = "Ross <rostikvunarchuk@gmail.com>"}]
 maintainers = [{name = "Ross", email = "Ross <rostikvunarchuk@gmail.com>"}]
@@ -11,12 +11,11 @@ requires-python = "==3.13.*"
 
 [dependency-groups]
 dev = [
-    "mypy>=1.17.1",
     "pre-commit>=4.3.0",
     "pytest>=8.4.1",
     "pytest-cov>=7.0.0",
     "ruff>=0.12.11",
-    "xenon>=0.9.3",
+    "ty>=0.0.18",
 ]
 
 
@@ -81,6 +80,7 @@ select = [
   'B',  # flake8-bugbear
   'BLE', # flake8-blind-except
   'C4',  # unnecessary comprehensions, map()
+  'C901', # code complexity
   'COM',  # flake8-commas
   'DTZ', # flake8-datetimez
   'E',  # pycodestyle
@@ -165,17 +165,5 @@ pythonpath = "src/"
 testpaths = "tests"
 
 
-[tool.bandit]
-tests = ["B201", "B301"]
-skips = ["B101", "B601"]
-
-
-[tool.mypy]
-python_version = "3.13"
-strict = true
-disallow_untyped_defs = true
-warn_return_any = true
-warn_unused_configs = true
-no_implicit_optional = true
-check_untyped_defs = true
-show_error_codes = true
+[tool.ty.environment]
+root = ["./src"]

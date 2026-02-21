@@ -27,17 +27,10 @@ repos:
 
   - repo: local
     hooks:
-      - id: xenon
-        name: xenon
-        args: [--max-absolute B --max-modules A --max-average A]
-        entry: uv run xenon
-        language: python
-        types: ['text']
-
-      - id: mypy
-        name: mypy
-        entry: uv run mypy
+      - id: ty
+        name: Run ty type checker
+        entry: uv run ty check
         language: system
-        'types_or': [ python, pyi ]
-        args: [ "--ignore-missing-imports", "--scripts-are-modules" ]
-        require_serial: true
+        types: [python]
+        # Set pass_filenames: true to run the hook only on staged files
+        pass_filenames: true
